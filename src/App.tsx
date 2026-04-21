@@ -25,7 +25,8 @@ import {
   AlertCircle,
   Layout,
   Server,
-  Palette
+  Palette,
+  Instagram
 } from 'lucide-react';
 
 function MouseParticleBackground() {
@@ -438,7 +439,7 @@ export default function App() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex-1 text-center lg:text-left"
+            className="flex-1 text-right"
           >
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-blue-600 bg-blue-50 rounded-full border border-blue-100">
               AVAILABLE FOR PROJECTS
@@ -447,10 +448,10 @@ export default function App() {
               Shafnat Fuaini <br />
               <span className="text-blue-600">Ramadhan</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+            <p className="text-xl text-slate-600 mb-10 max-w-2xl ml-auto leading-relaxed font-light">
                Full Stack Developer • Tim Developer <span className="font-semibold text-slate-900">Food AI Rescue</span> • Fokus pada pengerjaan Proyek Dosen untuk Pengabdian Masyarakat.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-end">
               <a href="#experience" className="bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
                 Lihat Pengalaman <ChevronRight size={20} />
               </a>
@@ -459,11 +460,14 @@ export default function App() {
               </a>
             </div>
             
-            <div className="mt-12 flex items-center justify-center lg:justify-start gap-6">
+            <div className="mt-12 flex items-center justify-end gap-6">
               <a href="https://www.linkedin.com/in/shafnat-fuaini-ramadhan" referrerPolicy="no-referrer" target="_blank" className="text-slate-400 hover:text-blue-600 transition-colors">
                 <Linkedin size={24} />
               </a>
-              <a href="mailto:shafnatfuaini@student.telkomuniversity.ac.id" className="text-slate-400 hover:text-red-500 transition-colors">
+              <a href="https://www.instagram.com/shafnatf.r" referrerPolicy="no-referrer" target="_blank" className="text-slate-400 hover:text-pink-600 transition-colors">
+                <Instagram size={24} />
+              </a>
+              <a href="mailto:shafnatfuainiramadhan@gmail.com" className="text-slate-400 hover:text-red-500 transition-colors">
                 <Mail size={24} />
               </a>
               <a href="tel:085215376975" className="text-slate-400 hover:text-green-500 transition-colors">
@@ -483,7 +487,7 @@ export default function App() {
               <div className="absolute inset-0 bg-blue-600 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] animate-[morph_8s_ease-in-out_infinite] opacity-10"></div>
               <div className="w-full h-full rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-2xl flex items-center justify-center relative overflow-hidden group">
                 <User size={120} className="text-white opacity-20 transform group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent text-right">
                   <p className="text-white font-bold text-xl">Shafnat Fuaini</p>
                   <p className="text-blue-200 text-sm">Full Stack Developer</p>
                 </div>
@@ -492,8 +496,8 @@ export default function App() {
               {/* Floating Cards */}
               <div className="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-xl floating animate-bounce-slow text-slate-800">
                 <Award className="text-yellow-500 w-8 h-8 mb-1" />
-                <p className="text-xs font-bold">5+ Tahun</p>
-                <p className="text-[10px] text-slate-500">Fotografi</p>
+                <p className="text-xs font-bold">PIC Educator</p>
+                <p className="text-[10px] text-slate-500">JagoAI</p>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl floating-delayed text-slate-800">
                 <Code className="text-blue-500 w-8 h-8 mb-1" />
@@ -550,16 +554,11 @@ export default function App() {
                 Salah satu pencapaian utama saya adalah menjadi bagian dari tim developer <span className="font-semibold text-slate-900 italic">Food AI Rescue</span>, sebuah terobosan aplikasi yang berhasil terpilih menjadi bagian dari 150 tim unggulan di program <span className="text-blue-600 font-bold">Innovillage</span>.
               </p>
               
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 <div className="p-4 bg-slate-50 rounded-xl">
                   <p className="text-sm text-slate-500 mb-1">Pendidikan Utama</p>
                   <p className="font-bold">D3 Sistem Informasi</p>
                   <p className="text-xs text-blue-600">Telkom University</p>
-                </div>
-                <div className="p-4 bg-slate-50 rounded-xl">
-                  <p className="text-sm text-slate-500 mb-1">Lokasi</p>
-                  <p className="font-bold">Bandung, Indonesia</p>
-                  <p className="text-xs text-blue-600">Jawa Barat</p>
                 </div>
               </div>
             </motion.div>
@@ -841,9 +840,6 @@ export default function App() {
                         </span>
                       </div>
                     </div>
-                    <div className="flex items-center text-sm text-slate-500 mb-4 gap-2">
-                       <MapPin size={14} /> <span>{exp.location}</span>
-                    </div>
                     <p className="text-slate-600 leading-relaxed mb-4">
                       {renderWithKoLab(exp.description)}
                     </p>
@@ -972,7 +968,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-xs text-blue-200">Kirim Email</p>
-                    <p className="font-bold">shafnat@student.telkomuniversity.ac.id</p>
+                    <p className="font-bold">shafnatfuainiramadhan@gmail.com</p>
                   </div>
                 </div>
                 
@@ -983,16 +979,6 @@ export default function App() {
                   <div>
                     <p className="text-xs text-blue-200">Telepon / WhatsApp</p>
                     <p className="font-bold">085215376975</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 group cursor-pointer text-white">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center group-hover:bg-white group-hover:text-blue-600 transition-all">
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <p className="text-xs text-blue-200">Lokasi</p>
-                    <p className="font-bold">Bandung, Indonesia</p>
                   </div>
                 </div>
               </div>
@@ -1080,15 +1066,18 @@ export default function App() {
             <a href="https://www.linkedin.com/in/shafnat-fuaini-ramadhan" aria-label="LinkedIn" referrerPolicy="no-referrer" target="_blank" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
               <Linkedin size={20} />
             </a>
-            <a href="#" aria-label="Github" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all">
+            <a href="https://www.instagram.com/shafnatf.r" aria-label="Instagram" referrerPolicy="no-referrer" target="_blank" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center text-slate-400 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all">
+              <Instagram size={20} />
+            </a>
+            <a href="https://github.com/shafnatfuaini" aria-label="Github" referrerPolicy="no-referrer" target="_blank" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all">
               <Github size={20} />
             </a>
-            <a href="mailto:shafnatfuaini@student.telkomuniversity.ac.id" aria-label="Email" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center text-slate-400 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all">
+            <a href="mailto:shafnatfuainiramadhan@gmail.com" aria-label="Email" className="w-10 h-10 border border-slate-300 rounded-full flex items-center justify-center text-slate-400 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all">
               <Mail size={20} />
             </a>
           </div>
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Shafnat Fuaini Ramadhan. Dibuat dengan 💙 di Bandung.
+            © {new Date().getFullYear()} Shafnat Fuaini Ramadhan. Dibuat dengan 💙.
           </p>
         </div>
       </footer>
