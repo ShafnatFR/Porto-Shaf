@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import profileImg from '../image/IMG-20260420-WA0052.jpg';
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValue, useTransform } from 'motion/react';
 import { 
   Github, 
@@ -486,8 +487,12 @@ export default function App() {
               {/* Profile Image Placeholder with Design */}
               <div className="absolute inset-0 bg-blue-600 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] animate-[morph_8s_ease-in-out_infinite] opacity-10"></div>
               <div className="w-full h-full rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-2xl flex items-center justify-center relative overflow-hidden group">
-                <User size={120} className="text-white opacity-20 transform group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent text-right">
+                <img 
+                  src={profileImg} 
+                  alt="Shafnat Fuaini Ramadhan" 
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-right">
                   <p className="text-white font-bold text-xl">Shafnat Fuaini</p>
                   <p className="text-blue-200 text-sm">Full Stack Developer</p>
                 </div>
