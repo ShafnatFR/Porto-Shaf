@@ -21,7 +21,8 @@ export default function Hero() {
             <span className="text-blue-600">Ramadhan</span>
           </h1>
           <p className="text-xl text-slate-600 mb-10 max-w-2xl ml-auto leading-relaxed font-light">
-            Full Stack Developer • Tim Developer <span className="font-semibold text-slate-900">Food AI Rescue</span> • 
+            Full Stack Developer • Tim Dev <span className="font-semibold text-slate-900">Food AI Rescue</span> <br></br>
+            PIC Educator <span className="font-semibold text-slate-900">Jago AI</span> • Tim Dev <span className="font-semibold text-slate-900">JagoResume</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-end">
             <a href="#experience" className="bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
