@@ -27,7 +27,8 @@ import {
   Layout,
   Server,
   Palette,
-  Instagram
+  Instagram,
+  MessageCircle
 } from 'lucide-react';
 
 function MouseParticleBackground() {
@@ -126,7 +127,8 @@ const experiences = [
     company: "Proyek Dosen FIT Telkom University",
     period: "2026",
     location: "Bandung, Jawa Barat",
-    description: "Fokus pada pengerjaan proyek dosen untuk pengabdian masyarakat sebagai bagian dari inisiatif Ko+Lab. Berkontribusi dalam pengembangan solusi teknologi yang berdampak langsung pada komunitas lokal."
+    description: "Fokus pada pengerjaan proyek dosen untuk pengabdian masyarakat sebagai bagian dari inisiatif Ko+Lab. Berkontribusi dalam pengembangan solusi teknologi yang berdampak langsung pada komunitas lokal.",
+    highlight: true
   },
   {
     title: "PIC Educator Jago AI",
@@ -140,14 +142,16 @@ const experiences = [
     company: "Innovillage (Ko+Lab)",
     period: "2025",
     location: "Bandung, Jawa Barat",
-    description: "Proyek unggulan yang dikembangkan bersama tim Ko+Lab. Berhasil menembus 150 tim terbaik di program Innovillage dengan fokus pada pengembangan fitur pencegahan food waste."
+    description: "Proyek unggulan yang dikembangkan bersama tim Ko+Lab. Berhasil menembus 150 tim terbaik di program Innovillage dengan fokus pada pengembangan fitur pencegahan food waste.",
+    highlight: true
   },
   {
     title: "PKM Dosen",
     company: "Proyek Dosen FIT Telkom University",
     period: "2025",
     location: "Bandung, Jawa Barat",
-    description: "Keterlibatan awal dalam proyek pengabdian masyarakat (PKM) bersama tim dosen FIT Telkom University saat pertama kali bergabung dengan Ko+Lab."
+    description: "Keterlibatan awal dalam proyek pengabdian masyarakat (PKM) bersama tim dosen FIT Telkom University saat pertama kali bergabung dengan Ko+Lab.",
+    highlight: true
   },
   {
     title: "Team Member & PIC Kebersihan",
@@ -398,8 +402,10 @@ export default function App() {
             <NavItem href="#experience" active={activeSection === 'experience'}>Experience</NavItem>
             <NavItem href="#contact" active={activeSection === 'contact'}>Contact</NavItem>
             <a 
-              href="#contact" 
-              className="ml-4 bg-blue-600 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-200"
+              href="https://wa.me/6285215376975" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 bg-blue-600 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-200 flex items-center gap-2"
             >
               Hubungi Saya
             </a>
@@ -450,14 +456,14 @@ export default function App() {
               <span className="text-blue-600">Ramadhan</span>
             </h1>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl ml-auto leading-relaxed font-light">
-               Full Stack Developer • Tim Developer <span className="font-semibold text-slate-900">Food AI Rescue</span> • Fokus pada pengerjaan Proyek Dosen untuk Pengabdian Masyarakat.
+               Full Stack Developer • Tim Developer <span className="font-semibold text-slate-900">Food AI Rescue</span> • 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-end">
               <a href="#experience" className="bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
                 Lihat Pengalaman <ChevronRight size={20} />
               </a>
-              <a href="#contact" className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 shadow-sm">
-                Hubungi Saya
+              <a href="https://wa.me/6285215376975" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 shadow-sm">
+                Hubungi Saya (WA)
               </a>
             </div>
             
@@ -834,7 +840,17 @@ export default function App() {
                   <div className="bg-slate-50 p-8 rounded-3xl hover:bg-white border border-transparent hover:border-slate-100 hover:shadow-xl transition-all duration-300 shadow-sm">
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
                       <div>
-                        <h3 className="text-xl font-bold text-slate-900">{exp.title}</h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-xl font-bold text-slate-900">{exp.title}</h3>
+                          {exp.highlight && (
+                            <motion.div
+                              animate={{ scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                            >
+                              <Star className="w-5 h-5 text-yellow-500 fill-yellow-500 shadow-sm" />
+                            </motion.div>
+                          )}
+                        </div>
                         <p className="text-blue-600 font-medium">
                           {renderWithKoLab(exp.company)}
                         </p>
@@ -880,41 +896,78 @@ export default function App() {
             <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
           
-          <div className="max-w-3xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-8">
             <motion.div 
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              whileHover={{ 
+                scale: 1.02, 
+                backgroundColor: "rgba(255, 255, 255, 0.08)",
+                borderColor: "rgba(59, 130, 246, 0.5)"
+              }}
+              initial={{ opacity: 0, x: -20 }}
               viewport={{ once: true }}
-              className="flex gap-6 items-start"
+              className="flex gap-8 p-8 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-md transition-all duration-500 group relative overflow-hidden"
             >
-              <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-blue-500 border border-blue-500/30">
-                <GraduationCap size={32} />
-              </div>
-              <div className="border-l-2 border-blue-600/30 pl-8 pb-8">
-                <h3 className="text-2xl font-bold mb-1">Universitas Telkom</h3>
-                <p className="text-blue-400 font-medium mb-4">D3 Sistem Informasi • 2025 (Expected/Active)</p>
-                <ul className="space-y-2 text-slate-400">
-                  <li className="flex items-center gap-2">• Aktif dalam Laboratorium Fakultas Ilmu Terapan (FIT)</li>
-                  <li className="flex items-center gap-2">• Terlibat dalam organisasi tingkat fakultas (HMDSI)</li>
-                  <li className="flex items-center gap-2">• Fokus pada pengembangan Frontend & UI/UX</li>
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl"></div>
+              
+              <motion.div 
+                whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                className="w-20 h-20 bg-blue-600/20 rounded-3xl flex items-center justify-center flex-shrink-0 text-blue-500 border border-blue-500/30 shadow-lg shadow-blue-500/10 relative z-10"
+              >
+                <GraduationCap size={40} />
+              </motion.div>
+              
+              <div className="flex-1 relative z-10">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70 group-hover:from-blue-100 group-hover:to-white transition-all duration-300">Universitas Telkom</h3>
+                  <span className="px-4 py-1.5 bg-blue-600/20 text-blue-400 rounded-full text-xs font-bold tracking-widest border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-all">S1 ACTIVE</span>
+                </div>
+                <p className="text-blue-400 font-semibold mb-6 flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                  D3 Sistem Informasi • 2025 (Expected)
+                </p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm">
+                   {[
+                     "Aktif dalam Laboratorium FIT",
+                     "Terlibat dalam Organisasi HMDSI",
+                     "Fokus Frontend & UI/UX Development",
+                     "Penerima Beasiswa Prestasi"
+                   ].map((item, i) => (
+                     <li key={i} className="flex items-center gap-2 group/item">
+                       <div className="w-1.5 h-1.5 bg-blue-600 rounded-full group-hover/item:scale-150 transition-transform"></div>
+                       <span>{item}</span>
+                     </li>
+                   ))}
                 </ul>
               </div>
             </motion.div>
             
             <motion.div 
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 0.7, x: 0 }}
+              whileHover={{ 
+                opacity: 1, 
+                scale: 1.02,
+                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                borderColor: "rgba(148, 163, 184, 0.3)"
+              }}
+              initial={{ opacity: 0, x: -20 }}
               viewport={{ once: true }}
-              className="flex gap-6 items-start opacity-70"
+              transition={{ delay: 0.2 }}
+              className="flex gap-8 p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-sm transition-all duration-500 group relative"
             >
-              <div className="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 text-slate-500">
-                <GraduationCap size={32} />
+              <div className="w-20 h-20 bg-slate-800 rounded-3xl flex items-center justify-center flex-shrink-0 text-slate-500 border border-slate-700/50 group-hover:text-slate-300 transition-colors">
+                <GraduationCap size={40} />
               </div>
-              <div className="border-l-2 border-slate-800 pl-8">
-                <h3 className="text-2xl font-bold mb-1">SMAS BPS&K 1 Jakarta</h3>
-                <p className="text-slate-500 font-medium mb-2">Lulus Tahun 2024</p>
-                <p className="text-slate-400 text-sm">
-                  Aktif menjabat sebagai Bendahara 2 OSIS dan Koordinator Ekstrakurikuler Hadroh. Memimpin tim dokumentasi dan fotografi sekolah.
+              
+              <div className="flex-1">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-3xl font-bold text-slate-300 group-hover:text-white transition-colors">SMAS BPS&K 1 Jakarta</h3>
+                  <span className="px-4 py-1.5 bg-slate-800 text-slate-500 rounded-full text-xs font-bold tracking-widest border border-slate-700">GRADUATED</span>
+                </div>
+                <p className="text-slate-500 font-medium mb-4">Lulus Tahun 2024</p>
+                <p className="text-slate-400 text-sm leading-relaxed max-w-2xl">
+                  Aktif menjabat sebagai <span className="text-slate-200">Bendahara 2 OSIS</span> dan Koordinator Ekstrakurikuler Hadroh. Memimpin tim dokumentasi dan fotografi sekolah dengan berbagai pencapaian kreatif tingkat lokal.
                 </p>
               </div>
             </motion.div>
@@ -990,73 +1043,21 @@ export default function App() {
             </div>
             
             <div className="flex-1 w-full flex justify-center lg:justify-end relative z-10">
-              <div className="bg-white p-2 rounded-[32px] w-full max-w-md shadow-2xl">
-                <div className="bg-slate-50 p-8 rounded-[28px]">
+               <div className="bg-white p-2 rounded-[32px] w-full max-w-md shadow-2xl">
+                <div className="bg-slate-50 p-12 rounded-[28px] text-center">
                   <h3 className="text-slate-900 text-2xl font-bold mb-6">Hubungi Langsung</h3>
-                  <form className="space-y-4" onSubmit={(e) => {
-                    e.preventDefault();
-                    if (!formErrors.name && !formErrors.email && !formErrors.message && formData.name && formData.email && formData.message) {
-                      alert('Pesan berhasil dikirim!');
-                    } else {
-                      alert('Mohon lengkapi formulir dengan benar.');
-                    }
-                  }}>
-                    <div className="relative">
-                      <input 
-                        type="text" 
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Nama Anda" 
-                        className={`w-full px-5 py-4 bg-white border ${formErrors.name ? 'border-red-500' : 'border-slate-200'} rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all`} 
-                      />
-                      {formErrors.name && (
-                        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-red-500 flex items-center gap-1">
-                          <AlertCircle size={18} />
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="relative">
-                      <input 
-                        type="email" 
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="Email Anda" 
-                        className={`w-full px-5 py-4 bg-white border ${formErrors.email ? 'border-red-500' : 'border-slate-200'} rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all`} 
-                      />
-                      {formErrors.email && (
-                        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-red-500 flex items-center gap-1">
-                          <AlertCircle size={18} />
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="relative">
-                      <textarea 
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Pesan Anda..." 
-                        rows={4} 
-                        className={`w-full px-5 py-4 bg-white border ${formErrors.message ? 'border-red-500' : 'border-slate-200'} rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all`}
-                      ></textarea>
-                      {formErrors.message && (
-                        <div className="absolute right-4 top-4 text-red-500">
-                          <AlertCircle size={18} />
-                        </div>
-                      )}
-                    </div>
-
-                    <button 
-                      type="submit"
-                      disabled={Object.values(formErrors).some(err => !!err) || !formData.name}
-                      className={`w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 disabled:opacity-50 disabled:cursor-not-allowed`}
-                    >
-                      Kirim Sekarang
-                    </button>
-                  </form>
+                  <p className="text-slate-600 mb-8 leading-relaxed">
+                    Klik tombol di bawah untuk langsung terhubung melalui WhatsApp. Saya biasanya merespon dengan cepat!
+                  </p>
+                  <a 
+                    href="https://wa.me/6285215376975" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-5 bg-[#25D366] text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#20ba5a] transition-all shadow-xl shadow-green-100 group"
+                  >
+                    <MessageCircle size={24} className="group-hover:scale-110 transition-transform" />
+                    <span>Chat via WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>
