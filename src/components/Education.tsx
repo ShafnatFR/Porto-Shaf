@@ -83,9 +83,19 @@ export default function Education() {
                 <span className="px-4 py-1.5 bg-slate-800 text-slate-500 rounded-full text-xs font-bold tracking-widest border border-slate-700">GRADUATED</span>
               </div>
               <p className="text-slate-500 font-medium mb-4">Lulus Tahun 2024</p>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-2xl text-left">
-                Aktif menjabat sebagai <span className="text-slate-200">Bendahara 2 OSIS</span> dan Koordinator Ekstrakurikuler Hadroh. Memimpin tim dokumentasi dan fotografi sekolah dengan berbagai pencapaian kreatif tingkat lokal.
-              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm">
+                {[
+                  "Aktif sebagai Bendahara 2 OSIS",
+                  "Koordinator Ekstrakurikuler Hadroh",
+                  "Memimpin Tim Dokumentasi & Fotografi",
+                  "Pencapaian Kreatif Tingkat Lokal"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2 group/item">
+                    <div className="w-1.5 h-1.5 bg-slate-500 rounded-full group-hover/item:scale-150 transition-transform"></div>
+                    <span className={i === 0 ? "text-slate-200" : ""}>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         </div>

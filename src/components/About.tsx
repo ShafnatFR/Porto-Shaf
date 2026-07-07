@@ -58,7 +58,7 @@ export default function About() {
             className="flex-1 grid grid-cols-2 gap-4"
           >
             <div className="bg-blue-600 p-8 rounded-3xl text-white flex flex-col justify-center items-center text-center">
-              <span className="text-4xl font-bold mb-2">5+</span>
+              <span className="text-4xl font-bold mb-2">2+</span>
               <span className="text-sm opacity-80 uppercase tracking-widest">Tahun Pengalaman</span>
             </div>
             <div className="bg-slate-900 p-8 rounded-3xl text-white flex flex-col justify-center items-center text-center">

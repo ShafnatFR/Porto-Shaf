@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Zap, Flame, Star, Code, Award } from 'lucide-react';
+// import { Zap, Flame, Star, Code, Award } from 'lucide-react';
 import { skills } from '../data/portfolio';
 
 export default function Skills() {
@@ -58,7 +58,7 @@ export default function Skills() {
         </div>
 
         {/* Vibe Coder Final Bos Card */}
-        <motion.div 
+        {/* <motion.div 
           whileInView={{ opacity: 1, scale: 1 }}
           initial={{ opacity: 0, scale: 0.9 }}
           whileHover={{ scale: 1.02 }}
@@ -122,7 +122,7 @@ export default function Skills() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
