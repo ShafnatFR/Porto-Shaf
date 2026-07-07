@@ -59,7 +59,7 @@ export const projects = [
   {
     title: "Food AI Rescue",
     description: "Aplikasi revolusioner untuk meminimalisir pemborosan makanan (food waste) melalui optimasi distribusi berbasis AI. Terpilih sebagai Top 150 Innovillage.",
-    tech: ["React Native", "Python", "Flask", "TensorFlow"],
+    tech: ["React", "MySQL", "Tailwind", "Vercel", "Supabase"],
     link: "https://innovillage.id",
     github: "https://github.com/shafnatfuaini/food-ai-rescue",
     image: "https://picsum.photos/seed/foodai/800/600",
