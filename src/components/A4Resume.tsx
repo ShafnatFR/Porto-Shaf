@@ -59,7 +59,7 @@ export default function A4Resume() {
                   <div key={index} className="break-avoid">
                     <div className="flex justify-between items-baseline mb-1">
                       <h4 className="font-bold text-slate-900 text-sm">{project.title}</h4>
-                      <span className="text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">{project.category || 'Portfolio'}</span>
+                      <span className="text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">{((project as any).category) || 'Portfolio'}</span>
                     </div>
                     <p className="text-xs text-slate-500 mb-1.5 font-medium">{project.tech ? project.tech.join(' • ') : 'Tech Stack'}</p>
                     <p className="text-xs text-slate-600 leading-relaxed text-justify">
