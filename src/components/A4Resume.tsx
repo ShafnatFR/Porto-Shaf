@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, MapPin, Printer } from 'lucide-react';
-import { portfolio, skills } from '../data/portfolio';
+import { projects, skills } from '../data/portfolio';
 
 export default function A4Resume() {
   return (
@@ -55,13 +55,13 @@ export default function A4Resume() {
               <h3 className="border-b-2 border-slate-200 pb-1 mb-3 font-extrabold text-slate-900 uppercase tracking-wide text-sm">Proyek & Inovasi Utama</h3>
               
               <div className="space-y-4">
-                {portfolio.slice(0, 3).map((project, index) => (
+                {projects.slice(0, 3).map((project, index) => (
                   <div key={index} className="break-avoid">
                     <div className="flex justify-between items-baseline mb-1">
                       <h4 className="font-bold text-slate-900 text-sm">{project.title}</h4>
-                      <span className="text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">{project.category}</span>
+                      <span className="text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">{project.category || 'Portfolio'}</span>
                     </div>
-                    <p className="text-xs text-slate-500 mb-1.5 font-medium">{project.company} | {project.period}</p>
+                    <p className="text-xs text-slate-500 mb-1.5 font-medium">{project.tech ? project.tech.join(' • ') : 'Tech Stack'}</p>
                     <p className="text-xs text-slate-600 leading-relaxed text-justify">
                       {project.description}
                     </p>
