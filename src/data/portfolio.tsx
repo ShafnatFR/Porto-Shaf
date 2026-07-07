@@ -58,6 +58,7 @@ export const experiences = [
 export const projects = [
   {
     title: "Food AI Rescue",
+    category: "AI & WEB APP",
     description: "Aplikasi revolusioner untuk meminimalisir pemborosan makanan (food waste) melalui optimasi distribusi berbasis AI. Terpilih sebagai Top 150 Innovillage.",
     tech: ["React", "MySQL", "Tailwind", "Vercel", "Supabase"],
     link: "https://innovillage.id",
@@ -68,6 +69,7 @@ export const projects = [
   },
   {
     title: "ReadyEat",
+    category: "WEB SYSTEM",
     description: "Kiosk web digital inovatif untuk pemesanan makanan berbasis sistem Pre-Order (PO) yang efisien dan interaktif.",
     tech: ["Laravel", "Tailwind CSS", "MySQL"],
     link: "#",
@@ -75,6 +77,17 @@ export const projects = [
     image: "https://picsum.photos/seed/ready-eat/800/600",
     details: "ReadyEat adalah sistem Kiosk web digital yang memfasilitasi pemesanan makanan dalam skema Pre-Order (PO). Dibangun menggunakan framework Laravel dan MySQL untuk keandalan transaksi serta Tailwind CSS untuk antarmuka yang responsif dan modern.",
     gallery: ["https://picsum.photos/seed/ready1/800/600", "https://picsum.photos/seed/ready2/800/600"]
+  },
+  {
+    title: "Cakap Pro",
+    category: "AI PROMPTING",
+    description: "Canvas Gemini yang dirancang untuk menyempurnakan prompt sederhana menjadi efektif dan efisien bagi AI Agent. Diperuntukkan khusus bagi masyarakat awam atau yang gaptek teknologi agar mendapatkan hasil maksimal.",
+    tech: ["Gemini AI", "AI Prompting", "Prompt Engineering", "AI Agent"],
+    link: "#",
+    github: "https://github.com/shafnatfuaini/cakap-pro",
+    image: "https://picsum.photos/seed/cakap-pro/800/600",
+    details: "Cakap Pro adalah solusi inovatif berbasis Canvas Gemini yang bertindak sebagai jembatan komunikasi antara pengguna awam (seperti ibu-ibu dan bapak-bapak yang gaptek teknologi) dengan AI Agent. Sistem ini secara otomatis menyempurnakan instruksi sederhana menjadi prompt yang terstruktur demi hasil yang akurat dan maksimal.",
+    gallery: ["https://picsum.photos/seed/cakap1/800/600", "https://picsum.photos/seed/cakap2/800/600"]
   },
   // {
   //   title: "JagoAI Educator Dashboard",
