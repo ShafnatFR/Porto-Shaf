@@ -11,8 +11,8 @@ export const experiences = [
     highlight: true
   },
   {
-    title: "PIC Educator Jago AI",
-    company: "Jago AI (Ko+Lab)",
+    title: "PIC Educator JagoAI",
+    company: "JagoAI (Ko+Lab)",
     period: "2025",
     location: "Online / Bandung",
     description: "Melalui keanggotaan Ko+Lab, saya berpindah ke startup JagoAI di akhir tahun. Bertanggung jawab dalam merancang modul, membuat video tutorial penggunaan AI, serta mengembangkan tools berbasis web yang terintegrasi AI."
@@ -98,23 +98,23 @@ export const projects = [
 ];
 
 export const skills = [
-  { 
-    name: "Frontend Development", 
-    icon: <Layout className="w-5 h-5" />, 
+  {
+    name: "Frontend Development",
+    icon: <Layout className="w-5 h-5" />,
     level: 90,
     details: "Membangun antarmuka yang responsif dan interaktif dengan performa optimal. Mahir dalam menerjemahkan desain menjadi kode yang bersih.",
     techs: ["React.js", "TypeScript", "Tailwind CSS", "HTML", "Bootstrap"]
   },
-  { 
-    name: "Backend Development", 
-    icon: <Server className="w-5 h-5" />, 
+  {
+    name: "Backend Development",
+    icon: <Server className="w-5 h-5" />,
     level: 80,
     details: "Mengembangkan logika sisi server, manajemen basis data, dan API yang aman untuk mendukung fungsionalitas aplikasi.",
     techs: ["Node.js", "PHP", "Java", "Laravel", "SQL", "Oracle Database", "MariaDB", "MongoDB"]
   },
-  { 
-    name: "UI/UX Design", 
-    icon: <Palette className="w-5 h-5" />, 
+  {
+    name: "UI/UX Design",
+    icon: <Palette className="w-5 h-5" />,
     level: 85,
     details: "Merancang pengalaman pengguna yang intuitif melalui riset, wireframing, dan prototyping berkualitas tinggi.",
     techs: ["Figma", "Wireframing", "Prototyping", "Design Systems"]

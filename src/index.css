@@ -10,3 +10,58 @@
     scroll-behavior: smooth;
   }
 }
+
+/* Konfigurasi Kertas A4 */
+.a4-paper {
+  width: 210mm;
+  min-height: 297mm;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 20mm;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Pengaturan khusus saat di-Print / Save to PDF */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body, html {
+    background-color: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .a4-paper {
+    box-shadow: none !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 12mm 15mm !important;
+    overflow: visible !important;
+  }
+
+  /* Cegah page break di dalam section */
+  section, .break-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Sembunyikan elemen no-print */
+  .no-print {
+    display: none !important;
+  }
+}
