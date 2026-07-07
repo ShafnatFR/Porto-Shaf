@@ -67,14 +67,14 @@ export const projects = [
     gallery: ["https://picsum.photos/seed/food1/800/600", "https://picsum.photos/seed/food2/800/600"]
   },
   {
-    title: "Smart POS System",
-    description: "Sistem Manajemen Penjualan (Point of Sale) yang membantu UMKM dalam mengelola inventaris dan laporan transaksi.",
-    tech: ["JavaScript", "React", "Firebase", "Chart.js"],
+    title: "ReadyEat",
+    description: "Kiosk web digital inovatif untuk pemesanan makanan berbasis sistem Pre-Order (PO) yang efisien dan interaktif.",
+    tech: ["Laravel", "Tailwind CSS", "MySQL"],
     link: "#",
-    github: "https://github.com/shafnatfuaini/smart-pos",
-    image: "https://picsum.photos/seed/pos-system/800/600",
-    details: "Sistem POS ini dirancang khusus untuk efisiensi operasional UMKM. Menggunakan Firebase untuk sinkronisasi data real-time dan Chart.js untuk visualisasi laporan penjualan harian dan bulanan.",
-    gallery: ["https://picsum.photos/seed/pos1/800/600", "https://picsum.photos/seed/pos2/800/600"]
+    github: "https://github.com/shafnatfuaini/ready-eat",
+    image: "https://picsum.photos/seed/ready-eat/800/600",
+    details: "ReadyEat adalah sistem Kiosk web digital yang memfasilitasi pemesanan makanan dalam skema Pre-Order (PO). Dibangun menggunakan framework Laravel dan MySQL untuk keandalan transaksi serta Tailwind CSS untuk antarmuka yang responsif dan modern.",
+    gallery: ["https://picsum.photos/seed/ready1/800/600", "https://picsum.photos/seed/ready2/800/600"]
   },
   // {
   //   title: "JagoAI Educator Dashboard",
