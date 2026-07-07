@@ -77,7 +77,7 @@ export default function A4Resume() {
               <div className="mb-3">
                 <div className="flex justify-between items-baseline">
                   <h4 className="font-bold text-slate-900 text-sm">Telkom University</h4>
-                  <span className="text-xs text-slate-500">2025 (Expected)</span>
+                  <span className="text-xs text-slate-500">2022 - 2025 (Expected)</span>
                 </div>
                 <p className="text-xs text-slate-600 font-medium mb-1">Diploma 3 (D3) Sistem Informasi</p>
                 <ul className="text-xs text-slate-500 list-disc list-outside ml-4 space-y-0.5">
@@ -90,7 +90,7 @@ export default function A4Resume() {
               <div>
                 <div className="flex justify-between items-baseline">
                   <h4 className="font-bold text-slate-900 text-sm">SMAS BPS&K 1 Jakarta</h4>
-                  <span className="text-xs text-slate-500">2024</span>
+                  <span className="text-xs text-slate-500">2021 - 2024</span>
                 </div>
                 <ul className="text-xs text-slate-500 list-disc list-outside ml-4 space-y-0.5 mt-1">
                   <li>Aktif sebagai Bendahara 2 OSIS</li>
@@ -135,6 +135,30 @@ export default function A4Resume() {
                     <p className="text-[9px] font-medium text-slate-500 uppercase">Tim Unggulan</p>
                   </div>
                </div>
+            </div>
+
+            {/* Portofolio Digital / Live Preview */}
+            <div className="break-avoid">
+               <h3 className="text-[11px] font-bold text-slate-900 uppercase tracking-wider mb-3 border-b border-slate-200 pb-1">Portofolio Digital</h3>
+               <a 
+                 href="https://shafnat-porto.vercel.app" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="block group"
+               >
+                 <div className="w-full h-[96px] rounded border border-slate-300 overflow-hidden bg-slate-900 relative shadow-sm mb-2">
+                   <iframe 
+                     src="https://shafnat-porto.vercel.app" 
+                     title="Live Portofolio Preview"
+                     className="pointer-events-none border-0"
+                     style={{ width: '900px', height: '506px', transform: 'scale(0.19)', transformOrigin: '0 0' }}
+                   />
+                 </div>
+                 <div className="flex items-center justify-between bg-white border border-slate-200 rounded px-2 py-1.5 text-[10px] font-bold text-blue-600 group-hover:bg-blue-50 transition">
+                   <span className="truncate">shafnat-porto.vercel.app</span>
+                   <span>↗</span>
+                 </div>
+               </a>
             </div>
 
           </div>

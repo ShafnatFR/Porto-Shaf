@@ -42,7 +42,7 @@ export default function Education() {
               </div>
               <p className="text-blue-400 font-semibold mb-6 flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                D3 Sistem Informasi • 2025 (Expected)
+                D3 Sistem Informasi • 2022 - 2025 (Expected)
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm">
                  {[
@@ -82,7 +82,7 @@ export default function Education() {
                 <h3 className="text-3xl font-bold text-slate-300 group-hover:text-white transition-colors">SMAS BPS&K 1 Jakarta</h3>
                 <span className="px-4 py-1.5 bg-slate-800 text-slate-500 rounded-full text-xs font-bold tracking-widest border border-slate-700">GRADUATED</span>
               </div>
-              <p className="text-slate-500 font-medium mb-4">Lulus Tahun 2024</p>
+              <p className="text-slate-500 font-medium mb-4">2021 - 2024</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-400 text-sm">
                 {[
                   "Aktif sebagai Bendahara 2 OSIS",
