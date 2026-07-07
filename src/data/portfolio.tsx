@@ -76,16 +76,16 @@ export const projects = [
     details: "Sistem POS ini dirancang khusus untuk efisiensi operasional UMKM. Menggunakan Firebase untuk sinkronisasi data real-time dan Chart.js untuk visualisasi laporan penjualan harian dan bulanan.",
     gallery: ["https://picsum.photos/seed/pos1/800/600", "https://picsum.photos/seed/pos2/800/600"]
   },
-  {
-    title: "JagoAI Educator Dashboard",
-    description: "Dashboard administratif untuk mengelola kurikulum dan memantau progres belajar siswa secara otomatis.",
-    tech: ["TypeScript", "Vite", "Motion", "Tailwind"],
-    link: "#",
-    github: "https://github.com/shafnatfuaini/jagoai-dashboard",
-    image: "https://picsum.photos/seed/edu-dashboard/800/600",
-    details: "Dashboard ini memungkinkan pendidik untuk memantau performa siswa secara real-time menggunakan metrik yang dihasilkan sistem. Dibangun dengan fokus pada kecepatan dan responsivitas.",
-    gallery: ["https://picsum.photos/seed/edu1/800/600", "https://picsum.photos/seed/edu2/800/600"]
-  },
+  // {
+  //   title: "JagoAI Educator Dashboard",
+  //   description: "Dashboard administratif untuk mengelola kurikulum dan memantau progres belajar siswa secara otomatis.",
+  //   tech: ["TypeScript", "Vite", "Motion", "Tailwind"],
+  //   link: "#",
+  //   github: "https://github.com/shafnatfuaini/jagoai-dashboard",
+  //   image: "https://picsum.photos/seed/edu-dashboard/800/600",
+  //   details: "Dashboard ini memungkinkan pendidik untuk memantau performa siswa secara real-time menggunakan metrik yang dihasilkan sistem. Dibangun dengan fokus pada kecepatan dan responsivitas.",
+  //   gallery: ["https://picsum.photos/seed/edu1/800/600", "https://picsum.photos/seed/edu2/800/600"]
+  // },
   {
     title: "EcoCapture Photography",
     description: "Website galeri foto profesional dengan optimasi gambar dan animasi transisi yang halus.",
