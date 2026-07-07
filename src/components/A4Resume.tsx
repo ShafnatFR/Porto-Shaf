@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, Printer } from 'lucide-react';
+import { Mail, MapPin, Printer, Crown } from 'lucide-react';
 import { projects, skills } from '../data/portfolio';
 
 export default function A4Resume() {
@@ -58,7 +58,12 @@ export default function A4Resume() {
                 {projects.slice(0, 3).map((project, index) => (
                   <div key={index} className="break-avoid">
                     <div className="flex justify-between items-baseline mb-1">
-                      <h4 className="font-bold text-slate-900 text-sm">{project.title}</h4>
+                      <h4 className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                        {project.title}
+                        {project.title === 'Food AI Rescue' && (
+                          <Crown size={14} className="text-amber-500 fill-amber-400 inline-block flex-shrink-0" />
+                        )}
+                      </h4>
                       <span className="text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">{((project as any).category) || 'Portfolio'}</span>
                     </div>
                     <p className="text-xs text-slate-500 mb-1.5 font-medium">{project.tech ? project.tech.join(' • ') : 'Tech Stack'}</p>
